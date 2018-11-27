@@ -1,4 +1,4 @@
-
+# testing how to add to check for vaild and invalid moves
 
 pos1 = ' '
 pos2 = ' '
@@ -10,9 +10,8 @@ pos7 = ' '
 pos8 = ' '
 pos9 = ' '
 
-gameExit = False
+def player_X_move_options():
 
-def player_X_options():
 
     global pos1
     global pos2
@@ -125,9 +124,7 @@ def player_X_options():
         print('--------')
         print(' '+ pos1 +'|'+ pos2 +'|'+ pos3 +'   ')
         print('--------')
-
-
-def player_O_options():
+def player_O_move_options():
 
     global pos1
     global pos2
@@ -240,33 +237,30 @@ def player_O_options():
         print('--------')
         print(' '+ pos1 +'|'+ pos2 +'|'+ pos3 +'   ')
         print('--------')
-
-
 def board():
 
     print('--------')
-    print(' '+ pos7 +'|'+ pos8 +'|'+ pos9 +'   ')
+    print('  | |   ')
     print('--------')
-    print(' '+ pos4 +'|'+ pos5 +'|'+ pos6 +'   ')
+    print('  | |   ')
     print('--------')
-    print(' '+ pos1 +'|'+ pos2 +'|'+ pos3 +'   ')
+    print('  | |   ')
     print('--------')
 
-while not gameExit:
 
-    player_X_options()
-    player_O_options()
+board()
+player_X_move_options()
+player_O_move_options()
 
 
-# notes
 
-# what does return do in python?
+"""
+if playerXMove or playerOMove
+    check to see if valid move
 
-# e.g:
-# def getPlayerMove(board):
-    # Let the player type in his move.
-    #move = ' '
-    #while move not in '1 2 3 4 5 6 7 8 9'.split() or not isSpaceFree(board, int(move)):
-    #    print('What is your next move? (1-9)')
-    #    move = input()
-#    return int(move)
+list of vaild moves
+    if box is open and not already taken
+list of moves which mean game won,lost,draw
+
+
+"""
