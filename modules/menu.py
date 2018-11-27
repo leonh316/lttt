@@ -1,45 +1,38 @@
 import random
-import time
 
-longTime = 1
-shortTime = 0.5
+player1 = 'x'
+player2 = 'o'
+
 
 def game_start_menu():
 
     print('________Tic Tac Toe________')
-    # time.sleep(shortTime)
+  
     print('Now rolling to choose player....')
-    time.sleep(shortTime)
-    print('....')
-    time.sleep(shortTime)
-    print('....')
-    time.sleep(shortTime)
-    print('....')
-    # time.sleep(shortTime)
+
+def who_goes_first():
+    global player1
+    global player2
+
+    # players to choose symbol
+    chooseSymbol = input('player 1: enter X or O to choose your symbol: ')
+    player1 = chooseSymbol
+    if player1 == 'x':
+        player2 = 'o'
+    if player1 == 'x':
+        player2 = 'o'
+    
+    print('player 2 is: ' + player2)
+  
+    print('random dice roll to choose who goes first')
+    print('rolling....')
     randomToChoosePlayer = random.randint(0,1)
     print('rolled')
     print(randomToChoosePlayer)
-    #print(randomToChoosePlayer) # used to check roll outcome
-    time.sleep(longTime)
-    # time.sleep(longTime)
-
     if randomToChoosePlayer == 0:
-        print('player 1 is X, player 2 is O')
-        print('X goes first, player 1 please select move. ')
-        time.sleep(longTime)
-    elif randomToChoosePlayer == 1:
-        print('player 2 is X, player 1 is O')
-        print('X goes first, player 2 please select move. ')
-        time.sleep(longTime)
+        playerA = player1
+        playerB = player2
 
-
-def instruction_board():
-
-    print('--BOARD-INSTRUCTIONS--')
-    print('--------')
-    print(' 7|8|9  ')
-    print('--------')
-    print(' 4|5|6  ')
-    print('--------')
-    print(' 1|2|3  ')
-    print('--------')
+    if randomToChoosePlayer == 1:
+        playerA = player2
+        playerB = player1
