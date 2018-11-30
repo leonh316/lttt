@@ -9,6 +9,9 @@ shortTime = 0.5
 gameExit = False
 
 
+# sleep time
+
+
 menu.game_start_menu()
 
 menu.instruction_board()

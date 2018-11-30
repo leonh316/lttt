@@ -23,6 +23,8 @@ def game_start_menu():
     time.sleep(longTime)
     # time.sleep(longTime)
 
+
+
     if randomToChoosePlayer == 0:
         print('player 1 is X, player 2 is O')
         print('X goes first, player 1 please select move. ')
